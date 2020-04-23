@@ -60,8 +60,11 @@
       </ul>
 
       <input type="button" value="Button 1" />
-      <input type="submit" value="Button 1" />
+      <input type="submit" value="Submit" />
       <input type="text" />
+
+      <a href="http://google.com">Google</a>
+      <a href="http://yahoo.com">Yahoo</a>
     </div>
     <script>
       //$("h1").hide();
@@ -78,6 +81,9 @@
 
       // this will remove the bullet from every third list item
       $("ul#list li:nth-child(3n)").css("list-style", "none");
+
+      // with the colon, it will grab the type that is in the selector and follow the method's command
+      $(":text").hide();
     </script>
   </body>
 </html>
