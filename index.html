@@ -38,20 +38,24 @@
       <p id="para1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
         deleniti voluptas quae, praesentium consectetur magni accusantium
-        voluptates. Odit ipsa, libero obcaecati a minus ullam est porro quia
-        recusandae veniam debitis!
+        voluptates. <span>Odit ipsa</span>, libero obcaecati a minus ullam est
+        porro quia recusandae veniam debitis!
       </p>
       <!-- Classes -->
-      <h1 class="heading1">Heading One</h1>
-      <p class="para1">
+      <h1 class="heading2">Heading Two</h1>
+      <p class="para2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
         deleniti voluptas quae, praesentium consectetur magni accusantium
-        voluptates. Odit ipsa, libero obcaecati a minus ullam est porro quia
-        recusandae veniam debitis!
+        voluptates. <span>Odit ipsa</span>, libero obcaecati a minus ullam est
+        porro quia recusandae veniam debitis!
       </p>
     </div>
     <script>
-      $("h1").hide();
+      //$("h1").hide();
+      //$("h1#heading1").hide();
+      //$("h1.heading2").hide();
+
+      $("p span").css("color", "red");
     </script>
   </body>
 </html>
