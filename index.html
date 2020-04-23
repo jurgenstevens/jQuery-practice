@@ -86,6 +86,9 @@
       $(":text").hide();
       // for the href attribute, use brackets in the selector
       $("[href]").css("color", "red");
+      $('a[href="http://yahoo.com"]').css("color", "green");
+      // asterisk grabs EVERYTHING. Following line of code will hide everything.
+      // $("*").hide();
     </script>
   </body>
 </html>
