@@ -58,6 +58,10 @@
         <li>List Item</li>
         <li>List Item</li>
       </ul>
+
+      <input type="button" value="Button 1" />
+      <input type="submit" value="Button 1" />
+      <input type="text" />
     </div>
     <script>
       //$("h1").hide();
@@ -66,8 +70,14 @@
 
       //$("p span").css("color", "red");
 
+      // this plays with the color from the li in the ul
       $("ul#list li:first").css("color", "red");
       $("ul#list li:last").css("color", "green");
+      $("ul#list li:even").css("background-color", "yellow");
+      $("ul#list li:odd").css("background-color", "#cccccc");
+
+      // this will remove the bullet from every third list item
+      $("ul#list li:nth-child(3n)").css("list-style", "none");
     </script>
   </body>
 </html>
