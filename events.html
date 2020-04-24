@@ -38,10 +38,29 @@
       <h3>Mouse Events</h3>
       <button id="btn1">Button 1</button>
       <button id="btn2">Button 2</button>
+      <p class="para1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        a et repudiandae ipsa doloribus dolor nam ullam! At, mollitia.
+        Praesentium, debitis excepturi quis nihil harum ad alias commodi nostrum
+        ex?
+      </p>
     </div>
     <script>
-      $("#btn1").click(function () {
-        alert("Button Clicked!");
+      // document ready is to keep the javascript in the top as neat code.
+      // in order for the jQuery to run, it'd have to be in the bottom. UNLESS
+      // we run the function when we have the document, ie the entire html, ready.
+      $(document).ready(function () {
+        // $("#btn1").click(function () {
+        //   alert("Button Clicked!");
+        // });
+        // // same goal, different method
+        // $("#btn1").on("click", function () {
+        //   alert("Button clicked");
+        // });
+        // this will hide the paragraph when button 1 is clicked
+        $("#btn1").on("click", function () {
+          $(".para1").hide();
+        });
       });
     </script>
   </body>
