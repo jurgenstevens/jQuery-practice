@@ -58,17 +58,23 @@
         //   alert("Button clicked");
         // });
         // this will hide the paragraph when button 1 is clicked
-        $("#btn1").on("click", function () {
-          $(".para1").hide();
-        });
+        // $("#btn1").on("click", function () {
+        //   $(".para1").hide();
+        // });
         // this will obviously show the paragraph again
-        $("#btn2").on("click", function () {
-          $(".para1").show();
-        });
+        // $("#btn2").on("click", function () {
+        //   $(".para1").show();
+        // });
         // // the following will use the same button to hide then show the paragraph again
         // $("#btn1").on("click", function () {
         //   $(".para1").toggle();
-        // });
+        $("#btn1").dblclick(function () {
+          $(".para1").toggle();
+        });
+        // this method will hide the paragraph when user hovers over button
+        $("#btn1").hover(function () {
+          $(".para1").toggle();
+        });
       });
     </script>
   </body>
