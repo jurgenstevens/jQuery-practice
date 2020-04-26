@@ -36,7 +36,7 @@
     </header>
     <div id="container">
       <h3>Mouse Events</h3>
-      <button id="btn1">Button 1</button>
+      <button id="btn1" class="btnClass">Button 1</button>
       <button id="btn2">Button 2</button>
       <p class="para1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
@@ -76,7 +76,7 @@
         // $("#btn1").hover(function () {
         //   $(".para1").toggle();
         // });
-        // // The next two will allow the user to hover over a button that will hide paragraph 1 if the mouse hovers over
+        // // The next three will allow the user to hover over a button that will hide paragraph 1 if the mouse hovers over
         // // and show the paragraph when the mouse is not longer over the button.
         // $("#btn1").on("mouseenter", function () {
         //   $(".para1").toggle();
@@ -84,6 +84,23 @@
         // $("#btn1").on("mouseleave", function () {
         //   $(".para1").toggle();
         // });
+        // $("#btn1").on("mousemove", function () {
+        //   $(".para1").toggle();
+        // });
+        // the following two are used to make paragraph 1 vanish while the mouse click is held down
+        // then reappears when the mouse button is released
+        // $("#btn1").on("mousedown", function () {
+        //   $(".para1").toggle();
+        // });
+        // $("#btn1").on("mouseup", function () {
+        //   $(".para1").toggle();
+        // });
+        $("#btn1").click(function (e) {
+          // alert(e.currentTarget.id);
+          // alert(e.currentTarget.innerHTML);
+          // alert(e.currentTarget.outerHTML);
+          alert(e.currentTarget.className);
+        });
       });
     </script>
   </body>
