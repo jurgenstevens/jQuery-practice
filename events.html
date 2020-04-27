@@ -101,6 +101,11 @@
           // alert(e.currentTarget.outerHTML);
           alert(e.currentTarget.className);
         });
+
+        // this will show the mouse's coordinates across the button1
+        $("#btn1").on("mousemove", function (e) {
+          console.log("Coords: Y:" + e.clientY + "X: " + e.clientX);
+        });
       });
     </script>
   </body>
