@@ -44,7 +44,7 @@
         Praesentium, debitis excepturi quis nihil harum ad alias commodi nostrum
         ex?
       </p>
-      <h1 id="coords"></h1>
+      <!-- <h1 id="coords"></h1> -->
       <hr />
       <form>
         <label>Name</label><br />
@@ -110,12 +110,12 @@
         // $("#btn1").on("mouseup", function () {
         //   $(".para1").toggle();
         // });
-        $("#btn1").click(function (e) {
-          // alert(e.currentTarget.id);
-          // alert(e.currentTarget.innerHTML);
-          // alert(e.currentTarget.outerHTML);
-          // alert(e.currentTarget.className);
-        });
+        // $("#btn1").click(function (e) {
+        // alert(e.currentTarget.id);
+        // alert(e.currentTarget.innerHTML);
+        // alert(e.currentTarget.outerHTML);
+        // alert(e.currentTarget.className);
+        // });
 
         // // this will show the mouse's coordinates across the button1
         // $("#btn1").on("mousemove", function (e) {
@@ -126,9 +126,12 @@
         //   console.log("Coords: Y:" + e.clientY + "X: " + e.clientX);
         // });
 
-        // this will insert html into the h1 above with the id of coords and show the current coordinates
-        $(document).on("mousemove", function (e) {
-          $("#coords").html("Coords: Y: " + e.clientY + "X: " + e.clientX);
+        // this will insert html into the h1 above with the id of coords (line 47) and show the current coordinates
+        // $(document).on("mousemove", function (e) {
+        //   $("#coords").html("Coords: Y: " + e.clientY + "X: " + e.clientX);
+        // });
+        $("input").focus(function () {
+          alert("Focus");
         });
       });
     </script>
