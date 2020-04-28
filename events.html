@@ -152,7 +152,9 @@
         // this will submit the information in the form
         $("#form").submit(function (e) {
           e.preventDefault();
-          console.log("Submitted");
+          // the following variable will retrieve the data from the name input field
+          let name = $("input#name").val();
+          console.log("Submitted", name);
         });
       });
     </script>
