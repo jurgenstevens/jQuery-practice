@@ -45,7 +45,11 @@
       // document ready is to keep the javascript in the top as neat code.
       // in order for the jQuery to run, it'd have to be in the bottom. UNLESS
       // we run the function when we have the document, ie the entire html, ready.
-      $(document).ready(function () {});
+      $(document).ready(function () {
+        // $("p.para1").css("color", "red");
+        // for multiple CSS properties, try the following
+        $("p.para1").css({ color: "red", background: "black" });
+      });
     </script>
   </body>
 </html>
