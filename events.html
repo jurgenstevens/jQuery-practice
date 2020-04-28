@@ -46,11 +46,11 @@
       </p>
       <!-- <h1 id="coords"></h1> -->
       <hr />
-      <form>
+      <form id="form">
         <label>Name</label><br />
         <input type="text" id="name" name="name" /><br />
         <label>Email</label><br />
-        <input type="email" id="email" name="email" /><br />
+        <input type="text" id="email" name="email" /><br />
         <label>Gender</label><br />
         <select name="gender" id="gender">
           <option value="male">Male</option>
@@ -147,6 +147,12 @@
         // This will create an alert that will show what gender has been picked
         $("select#gender").change(function (e) {
           alert(e.target.value);
+        });
+
+        // this will submit the information in the form
+        $("#form").submit(function (e) {
+          e.preventDefault();
+          console.log("Submitted");
         });
       });
     </script>
