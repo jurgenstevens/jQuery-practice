@@ -116,7 +116,6 @@
         // alert(e.currentTarget.outerHTML);
         // alert(e.currentTarget.className);
         // });
-
         // // this will show the mouse's coordinates across the button1
         // $("#btn1").on("mousemove", function (e) {
         //   console.log("Coords: Y:" + e.clientY + "X: " + e.clientX);
@@ -125,27 +124,29 @@
         // $(document).on("mousemove", function (e) {
         //   console.log("Coords: Y:" + e.clientY + "X: " + e.clientX);
         // });
-
         // this will insert html into the h1 above with the id of coords (line 47) and show the current coordinates
         // $(document).on("mousemove", function (e) {
         //   $("#coords").html("Coords: Y: " + e.clientY + "X: " + e.clientX);
         // });
-
         // this will change the background of ALL input fields to pink
-        $("input").focus(function () {
-          // alert("Focus");
-          $(this).css("background", "pink");
-        });
+        // $("input").focus(function () {
+        //   // alert("Focus");
+        //   $(this).css("background", "pink");
+        // });
+        // // with the following you can click out of the input field and the field will
+        // // return to the its original color white
+        // $("input").blur(function () {
+        //   // alert("Focus");
+        //   $(this).css("background", "white");
+        // });
+        // // this will show the information that's being typed in
+        // $("input").keyup(function (e) {
+        //   console.log(e.target.value);
+        // });
 
-        // with the following you can click out of the input field and the field will
-        // return to the its original color white
-        $("input").blur(function () {
-          // alert("Focus");
-          $(this).css("background", "white");
-        });
-
-        $("input").keyup(function (e) {
-          console.log(e.target.value);
+        // This will create an alert that will show what gender has been picked
+        $("select#gender").change(function (e) {
+          alert(e.target.value);
         });
       });
     </script>
