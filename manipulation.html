@@ -28,6 +28,10 @@
         margin: auto;
         padding: 10px;
       }
+      .myClass {
+        color: blue;
+        background: black;
+      }
     </style>
   </head>
 
@@ -49,6 +53,10 @@
         // $("p.para1").css("color", "red");
         // for multiple CSS properties, try the following
         $("p.para1").css({ color: "red", background: "black" });
+        // this will add the CSS we included above to para2
+        // $("p.para2").addClass("myClass");
+        // this one will remove the myClass class that was added to para2
+        $("p.para2").removeClass("myClass");
       });
     </script>
   </body>
