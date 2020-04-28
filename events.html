@@ -130,9 +130,18 @@
         // $(document).on("mousemove", function (e) {
         //   $("#coords").html("Coords: Y: " + e.clientY + "X: " + e.clientX);
         // });
+
+        // this will change the background of ALL input fields to pink
         $("input").focus(function () {
           // alert("Focus");
           $(this).css("background", "pink");
+        });
+
+        // with the following you can click out of the input field and the field will
+        // return to the its original color white
+        $("input").blur(function () {
+          // alert("Focus");
+          $(this).css("background", "white");
         });
       });
     </script>
