@@ -81,6 +81,16 @@
         $(".para1").appendTo(".para2");
         // this will move para1 above para2
         $(".para1").prependTo(".para2");
+
+        // the before method will place whatever element written out before what's written into the selector
+        $("ul").before("<h4>Hello</h4>");
+        // the after method will place whatever element written out after what's written into the selector
+        $("ul").after("<h4>World</h4>");
+
+        // this will clear out all the inner elements within the ul
+        $("ul").empty();
+        // this will detach the ul element from the DOM. Disappear.
+        $("ul").detach();
       });
     </script>
   </body>
