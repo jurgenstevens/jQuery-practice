@@ -61,6 +61,21 @@
         $("#btnFadeOut").click(function () {
           // this selects the hello world box div and makes it fade out
           $("#box").fadeOut();
+          //   $("#box").fadeOut('slow');
+          //   $("#box").fadeOut('fast');
+          //   $("#box").fadeOut(3000); // 3 seconds
+          // after the box has faded it, the text in the button will change to whatever is in the parameter
+          $("#btnFadeOut").text("Its Gone");
+        });
+        // this is a click event for the fade in button
+        $("#btnFadeIn").click(function () {
+          // this selects the hello world box div and makes it fade out
+          $("#box").fadeIn();
+        });
+
+        // this click event will fade out the box then fade it in
+        $("#btnFadeTog").click(function () {
+          $("#box").fadeToggle(1000);
         });
       });
     </script>
