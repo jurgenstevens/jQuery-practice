@@ -50,13 +50,19 @@
       <button id="btnFadeTog">Fade Toggle</button>
 
       <hr />
-      <div id="box"><h1>Hellow World</h1></div>
+      <div id="box"><h1>Hello World</h1></div>
     </div>
     <script>
       // document ready is to keep the javascript in the top as neat code.
       // in order for the jQuery to run, it'd have to be in the bottom. UNLESS
       // we run the function when we have the document, ie the entire html, ready.
-      $(document).ready(function () {});
+      $(document).ready(function () {
+        // this is a click event for the fade out button
+        $("#btnFadeOut").click(function () {
+          // this selects the hello world box div and makes it fade out
+          $("#box").fadeOut();
+        });
+      });
     </script>
   </body>
 </html>
