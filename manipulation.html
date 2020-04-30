@@ -121,9 +121,9 @@
 
         // this will create an array from the ul list with the li's being the objects
         let newArr = $("ul#list li").toArray();
-        //
+        // this will loop through the array and the function will list them with console.log
         $.each(newArr, function (i, val) {
-          // this will list the values' html
+          // this will list the values' html in the console
           console.log(val.innerHTML);
         });
       });
