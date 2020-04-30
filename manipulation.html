@@ -52,6 +52,7 @@
         <li>List Item 4</li>
       </ul>
       <a href="http://google.com">Google</a>
+      <ul id="users"></ul>
     </div>
     <script>
       // document ready is to keep the javascript in the top as neat code.
@@ -117,6 +118,14 @@
             e.preventDefault;
             $("ul").append("<li>" + e.target.value + "</li>");
           }
+        });
+
+        // arrays
+        let myArr = ["Jurgen", "Dzenita", "Matt", "Chris"];
+        // to loop through an array use the each method
+        $.each(myArr, function (i, val) {
+          // this will append the values of the array in the ul
+          $("#users").append("<li>" + val + "</li>");
         });
       });
     </script>
