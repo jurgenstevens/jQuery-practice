@@ -28,6 +28,15 @@
         margin: auto;
         padding: 10px;
       }
+
+      #box {
+        background: #333;
+        color: #fff;
+        width: 500px;
+        height: 90px;
+        padding: 40px;
+        text-align: center;
+      }
     </style>
   </head>
 
@@ -35,7 +44,14 @@
     <header>
       <h1>jQuery Crash Course | Effects & Animation</h1>
     </header>
-    <div id="container"></div>
+    <div id="container">
+      <button id="btnFadeOut">Fade Out</button>
+      <button id="btnFadeIn">Fade In</button>
+      <button id="btnFadeTog">Fade Toggle</button>
+
+      <hr />
+      <div id="box"><h1>Hellow World</h1></div>
+    </div>
     <script>
       // document ready is to keep the javascript in the top as neat code.
       // in order for the jQuery to run, it'd have to be in the bottom. UNLESS
