@@ -79,6 +79,23 @@
         //     );
         //   });
         // });
+        // this is for the POST method
+        $("#postForm").submit(function (e) {
+          e.preventDefault();
+          // you can set these as variables to not have to constantly reach into the DOM
+          let title = $("#title").val();
+          let body = $("#body").val();
+          // the third party API's url is in the action attribute above and is converted to a variable here
+          let url = $(this).attr("action");
+
+          $.post(url, { title: title, body: body }).done(function (data) {
+            console.log("Post Saved");
+            console.log(data);
+            //     $("#result").append(
+            //       "<h3>" + post.title + "</h3><p>" + post.body + "</p>"
+            //     );
+          });
+        });
       });
     </script>
   </body>
