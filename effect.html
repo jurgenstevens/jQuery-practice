@@ -54,6 +54,7 @@
       <button id="btnSlideUp">Slide Up</button>
       <button id="btnSlideDown">Slide Down</button>
       <button id="btnSlideTog">Slide Toggle</button>
+      <button id="btnStop">Stop</button>
 
       <hr />
       <div id="box"><h1>Hello World</h1></div>
@@ -81,6 +82,21 @@
         // this click event will fade out the box then fade it in
         $("#btnFadeTog").click(function () {
           $("#box").fadeToggle(1000);
+        });
+
+        // the same concept with the fade methods, you can use the slide methods
+        $("#btnSlideDown").click(function () {
+          $("#box").slideDown(3000);
+        });
+        $("#btnSlideUp").click(function () {
+          $("#box").slideUp(3000);
+        });
+        $("#btnSlideTog").click(function () {
+          $("#box").slideToggle(3000);
+        });
+        // this stops the slide
+        $("#btnStop").click(function () {
+          $("#box").stop();
         });
       });
     </script>
