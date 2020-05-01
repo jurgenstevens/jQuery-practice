@@ -91,9 +91,8 @@
           $.post(url, { title: title, body: body }).done(function (data) {
             console.log("Post Saved");
             console.log(data);
-            //     $("#result").append(
-            //       "<h3>" + post.title + "</h3><p>" + post.body + "</p>"
-            //     );
+            // this will render whatever was typed in above the forms and submit button
+            $("#result").append("<h3>" + title + "</h3><p>" + body + "</p>");
           });
         });
       });
