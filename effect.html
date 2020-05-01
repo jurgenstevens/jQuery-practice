@@ -50,6 +50,12 @@
       <button id="btnFadeTog">Fade Toggle</button>
 
       <hr />
+
+      <button id="btnSlideUp">Slide Up</button>
+      <button id="btnSlideDown">Slide Down</button>
+      <button id="btnSlideTog">Slide Toggle</button>
+
+      <hr />
       <div id="box"><h1>Hello World</h1></div>
     </div>
     <script>
@@ -72,7 +78,6 @@
           // this selects the hello world box div and makes it fade out
           $("#box").fadeIn();
         });
-
         // this click event will fade out the box then fade it in
         $("#btnFadeTog").click(function () {
           $("#box").fadeToggle(1000);
