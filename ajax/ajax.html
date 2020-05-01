@@ -35,15 +35,11 @@
     <script>
       $(document).ready(function () {
         //this method will load the data/h1 from the test.html file into the div with id of result
-        $("#result").load("test.html", function (
-          responseTxt,
-          statusTxt,
-          xhr
-        ) {
-          if (statusTxt == 'success') {
-            alert('It went fine!')
-          } else if (statusTxt == 'error') {
-            alert('Error:' xhr.statusTxt)
+        $("#result").load("test.html", function (responseTxt, statusTxt, xhr) {
+          if (statusTxt == "success") {
+            alert("It went fine!");
+          } else if (statusTxt == "error") {
+            alert("Error:" + xhr.statusTxt);
           }
         });
       });
