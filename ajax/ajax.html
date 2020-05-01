@@ -49,13 +49,23 @@
         //   $("#result").html(data);
         // });
 
-        // this method will retrieve specifically JSON formatted data
-        $.getJSON("users.json", function (data) {
-          // we'll loop through with .each and pass in the data we're getting back and a function
-          $.each(data, function (index, user) {
-            // this will append the data into whatever is in the selector (#users) as li's
-            $("ul#users").append("<li>" + user.firstName + "</li>");
-          });
+        // // this method will retrieve specifically JSON formatted data
+        // $.getJSON("users.json", function (data) {
+        //   // we'll loop through with .each and pass in the data we're getting back and a function
+        //   $.each(data, function (index, user) {
+        //     // this will append the data into whatever is in the selector (#users) as li's
+        //     $("ul#users").append("<li>" + user.firstName + "</li>");
+        //   });
+        // });
+
+        // the AJAX method will use the GET method from the URL to retrieve JSON data
+        $.ajax({
+          method: "GET",
+          url: "https://jsonplaceholder.typicode.com/posts",
+          dataType: "json",
+          // the done method will have a function that will pass back data
+        }).done(function (data) {
+          console.log(data);
         });
       });
     </script>
