@@ -31,6 +31,7 @@
     </header>
     <div id="container">
       <div id="result"></div>
+      <ul id="users"></ul>
     </div>
     <script>
       $(document).ready(function () {
@@ -44,8 +45,17 @@
         //   }
         // });
         //this get method will retrieve the data from the file in the selector
-        $.get("test.html", function (data) {
-          $("#result").html(data);
+        // $.get("test.html", function (data) {
+        //   $("#result").html(data);
+        // });
+
+        // this method will retrieve specifically JSON formatted data
+        $.getJSON("users.json", function (data) {
+          // we'll loop through with .each and pass in the data we're getting back and a function
+          $.each(data, function (index, user) {
+            // this will append the data into whatever is in the selector (#users) as li's
+            $("ul#users").append("<li>" + user.firstName + "</li>");
+          });
         });
       });
     </script>
