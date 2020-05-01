@@ -39,7 +39,13 @@
           responseTxt,
           statusTxt,
           xhr
-        ) {});
+        ) {
+          if (statusTxt == 'success') {
+            alert('It went fine!')
+          } else if (statusTxt == 'error') {
+            alert('Error:' xhr.statusTxt)
+          }
+        });
       });
     </script>
   </body>
