@@ -114,14 +114,42 @@
         });
 
         // this will move the red box to the right by adding 500px to the left of it
+        // it will also look pinkish and grow three times in size
         $("#moveRight").click(function () {
           $("#box2").animate({
             left: 500,
+            height: "300px",
+            width: "300px",
+            opacity: "0.5",
           });
         });
+        // this will move left to its original shape
         $("#moveLeft").click(function () {
           $("#box2").animate({
             left: 0,
+            height: "100px",
+            width: "100px",
+            opacity: "1",
+          });
+        });
+
+        // this allows the red square to move around clockwise in a square
+        $("#moveAround").click(function () {
+          // you can set box2 as a variable to not have to constantly reach into the DOM
+          let box = $("#box2");
+          box.animate({
+            left: 300,
+          });
+          box.animate({
+            top: 300,
+          });
+          box.animate({
+            top: 300,
+            left: 0,
+          });
+          box.animate({
+            left: 0,
+            top: 0,
           });
         });
       });
