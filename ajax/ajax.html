@@ -32,6 +32,14 @@
     <div id="container">
       <div id="result"></div>
       <ul id="users"></ul>
+      <h3>Add Post</h3>
+      <form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
+        <input type="text" id="title" placeholder="Title" />
+        <br />
+        <textarea placeholder="Body" id="body"></textarea>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
     </div>
     <script>
       $(document).ready(function () {
@@ -48,7 +56,6 @@
         // $.get("test.html", function (data) {
         //   $("#result").html(data);
         // });
-
         // // this method will retrieve specifically JSON formatted data
         // $.getJSON("users.json", function (data) {
         //   // we'll loop through with .each and pass in the data we're getting back and a function
@@ -57,22 +64,21 @@
         //     $("ul#users").append("<li>" + user.firstName + "</li>");
         //   });
         // });
-
-        // the AJAX method will use the GET method from the third party API URL to retrieve JSON data
-        $.ajax({
-          method: "GET",
-          url: "https://jsonplaceholder.typicode.com/posts",
-          dataType: "json",
-          // the done method will have a function that will pass back data
-        }).done(function (data) {
-          // you can .map instead of .each to loop through on jQuery as well
-          $.map(data, function (post, i) {
-            // this will render the JSON's titles and body into the div with id of result
-            $("#result").append(
-              "<h3>" + post.title + "</h3><p>" + post.body + "</p>"
-            );
-          });
-        });
+        // // the AJAX method will use the GET method from the third party API URL to retrieve JSON data
+        // $.ajax({
+        //   method: "GET",
+        //   url: "https://jsonplaceholder.typicode.com/posts",
+        //   dataType: "json",
+        //   // the done method will have a function that will pass back data
+        // }).done(function (data) {
+        //   // you can .map instead of .each to loop through on jQuery as well
+        //   $.map(data, function (post, i) {
+        //     // this will render the JSON's titles and body into the div with id of result
+        //     $("#result").append(
+        //       "<h3>" + post.title + "</h3><p>" + post.body + "</p>"
+        //     );
+        //   });
+        // });
       });
     </script>
   </body>
