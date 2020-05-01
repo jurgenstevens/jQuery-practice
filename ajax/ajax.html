@@ -58,14 +58,20 @@
         //   });
         // });
 
-        // the AJAX method will use the GET method from the URL to retrieve JSON data
+        // the AJAX method will use the GET method from the third party API URL to retrieve JSON data
         $.ajax({
           method: "GET",
           url: "https://jsonplaceholder.typicode.com/posts",
           dataType: "json",
           // the done method will have a function that will pass back data
         }).done(function (data) {
-          console.log(data);
+          // you can .map instead of .each to loop through on jQuery as well
+          $.map(data, function (post, i) {
+            // this will render the JSON's titles and body into the div with id of result
+            $("#result").append(
+              "<h3>" + post.title + "</h3><p>" + post.body + "</p>"
+            );
+          });
         });
       });
     </script>
