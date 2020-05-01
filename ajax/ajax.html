@@ -36,6 +36,7 @@
       $(document).ready(function () {
         //this method will load the data/h1 from the test.html file into the div with id of result
         $("#result").load("test.html", function (responseTxt, statusTxt, xhr) {
+          // this conditional will show if the file loaded correctly
           if (statusTxt == "success") {
             alert("It went fine!");
           } else if (statusTxt == "error") {
