@@ -34,14 +34,18 @@
     </div>
     <script>
       $(document).ready(function () {
-        //this method will load the data/h1 from the test.html file into the div with id of result
-        $("#result").load("test.html", function (responseTxt, statusTxt, xhr) {
-          // this conditional will show if the file loaded correctly
-          if (statusTxt == "success") {
-            alert("It went fine!");
-          } else if (statusTxt == "error") {
-            alert("Error:" + xhr.statusTxt);
-          }
+        // //this method will load the data/h1 from the test.html file into the div with id of result
+        // $("#result").load("test.html", function (responseTxt, statusTxt, xhr) {
+        //   // this conditional will show if the file loaded correctly
+        //   if (statusTxt == "success") {
+        //     alert("It went fine!");
+        //   } else if (statusTxt == "error") {
+        //     alert("Error:" + xhr.statusTxt);
+        //   }
+        // });
+        //this get method will retrieve the data from the file in the selector
+        $.get("test.html", function (data) {
+          $("#result").html(data);
         });
       });
     </script>
