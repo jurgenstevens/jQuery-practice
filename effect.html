@@ -112,6 +112,18 @@
         $("#btnStop").click(function () {
           $("#box").stop();
         });
+
+        // this will move the red box to the right by adding 500px to the left of it
+        $("#moveRight").click(function () {
+          $("#box2").animate({
+            left: 500,
+          });
+        });
+        $("#moveLeft").click(function () {
+          $("#box2").animate({
+            left: 0,
+          });
+        });
       });
     </script>
   </body>
